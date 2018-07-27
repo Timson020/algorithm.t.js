@@ -29,14 +29,6 @@ class Binary {
 	}
 }
 
-const tree = new Binary()
-
-const list = [5,56,57,89,123,1,30,6,0]
-
-list.forEach(it => tree.insert(it))
-
-console.info(tree)
-
 
 // ES5
 // function Binary() {
@@ -65,10 +57,18 @@ console.info(tree)
 // 	}
 // }
 
-// const tree = new Binary()
 
-// const list = [5,56,57,89,123,1,30,6,0]
+// 校验生成二叉树
+function newDate() {
+	const tree = new Binary()
 
-// list.forEach(it => tree.insert(it))
+	const list = [5,56,57,89,123,1,30,6,0]
 
-// console.info(tree)
+	list.forEach(it => tree.insert(it))
+
+	console.info(tree)
+
+	this._tree = tree
+}
+
+newDate()
