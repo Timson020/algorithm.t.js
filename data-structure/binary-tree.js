@@ -62,67 +62,6 @@ class Binary {
 	}
 }
 
-
-// ES5
-// function Binary() {
-// 	let root = null
-	
-// 	const Node = function(value) {
-// 		this.key = value
-// 		this.left = null
-// 		this.right = null
-// 	}
-
-// 	this.insert = function(value) {
-// 		const node = new Node(value)
-// 		!root ? root = node : insertNode(root, node)
-// 	}
-
-// 	this.inOrderTraversal = function(cb) {
-// 		inOrderTraversalNode(root, cb)
-// 	}
-
-// 	this.preOrderTraversal = function(cb) {
-// 		preOrderTraversalNode(root, cb)
-// 	}
-
-// 	this.postOrderTraversal = function(cb) {
-// 		postOrderTraversalNode(root, cb)
-// 	}
-
-// 	function insertNode(rootNode, node) {
-// 		if ((node.key < rootNode.key) && !rootNode.left) rootNode.left = node
-		
-// 		if ((node.key < rootNode.key) && rootNode.left) insertNode(rootNode.left, node)
-
-// 		if ((node.key > rootNode.key) && !rootNode.right) rootNode.right = node
-
-// 		if ((node.key > rootNode.key) && rootNode.right) insertNode(rootNode.right, node)
-// 	}
-
-// 	function inOrderTraversalNode(node, cb) {
-// 		if (!node) return
-// 		inOrderTraversalNode(node.left, cb)
-// 		cb(node.key)
-// 		inOrderTraversalNode(node.right, cb)
-// 	}
-
-// 	function preOrderTraversalNode(node, cb) {
-// 		if (!node) return
-// 		cb(node.key)
-// 		preOrderTraversalNode(node.left, cb)
-// 		preOrderTraversalNode(node.right, cb)	
-// 	}
-
-// 	function postOrderTraversalNode(node, cb) {
-// 		if (!node) return
-// 		postOrderTraversalNode(node.left, cb)
-// 		postOrderTraversalNode(node.right, cb)
-// 		cb(node.key)
-// 	}
-// }
-
-
 // 校验生成二叉树
 function newDate() {
 	const tree = new Binary()
@@ -161,5 +100,3 @@ function doPostOrderTraversal() {
 }
 
 newDate()
-
-
