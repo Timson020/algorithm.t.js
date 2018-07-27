@@ -1,5 +1,5 @@
 // ES6
-class Queue {
+export default class Queue {
 	constructor() {
 		this.data = []
 	}

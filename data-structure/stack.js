@@ -1,5 +1,5 @@
 // ES6
-class Stack {
+export default class Stack {
 	constructor() {
 		this.data = []
 	}

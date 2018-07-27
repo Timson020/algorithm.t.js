@@ -7,7 +7,7 @@ class Node {
 	}
 }
 
-class Binary {
+export default class Binary {
 	constructor() {
 		this.tree = null
 	}
