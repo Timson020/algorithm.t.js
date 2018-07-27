@@ -1,0 +1,34 @@
+{
+  "name": "algorithm.t",
+  "version": "1.0.0",
+  "description": "data-structure && algorithm",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Timson020/algorithm.t.js.git"
+  },
+  "keywords": [
+    "data-structure",
+    "algorithm",
+    "javascript",
+    "node",
+    "es6"
+  ],
+  "author": "Timson020",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Timson020/algorithm.t.js/issues"
+  },
+  "homepage": "https://github.com/Timson020/algorithm.t.js#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "eslint": "^5.2.0"
+  }
+}
