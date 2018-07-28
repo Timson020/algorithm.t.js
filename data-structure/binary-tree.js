@@ -43,6 +43,34 @@ export default class Binary {
 		cb(node.key)
 	}
 
+	static findMin(node) {
+		let n = node
+		if (!n) return null
+		while (n.left) {
+			n = n.left
+		}
+		return n
+	}
+
+	static findMax(node) {
+		let n = node
+		if (!n) return null
+		while (n.right) {
+			n = n.right
+		}
+		return n
+	}
+
+	static findNode(rootNode, node) {
+		if (rootNode.key == node.key) return true
+
+		if (rootNode.right && rootNode.key < node.key) return Binary.findNode(rootNode.right, node)
+
+		if (rootNode.left && rootNode.key > node.key) return Binary.findNode(rootNode.left, node)
+
+		return false
+	}
+
 	insert(value) {
 		const node = new Node(value)
 
@@ -59,6 +87,18 @@ export default class Binary {
 
 	postOrderTraversal(cb) {
 		Binary.postOrderTraversalNode(this.tree, cb)	
+	}
+
+	min() {
+		return Binary.findMin(this.tree)
+	}
+
+	max() {
+		return Binary.findMax(this.tree)
+	}
+
+	find(node) {
+		return Binary.findNode(this.tree, node)
 	}
 }
 
@@ -82,6 +122,14 @@ function newDate() {
 	
 	doPostOrderTraversal()
 	console.info('后序遍历完成')
+
+	console.info(`查找出最小值是: ${global._tree.min().key}`)
+
+	console.info(`查找出最大值是: ${global._tree.max().key}`)
+
+	console.info(`查找出9的值是: ${global._tree.find(new Node(9))}`)
+
+	console.info(`查找出6的值是: ${global._tree.find(new Node(6))}`)
 }
 
 // 执行中序遍历
