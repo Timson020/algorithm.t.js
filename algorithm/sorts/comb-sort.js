@@ -3,19 +3,28 @@ function randomInt(max = 10, min = 0) {
 	return Math.round(min + Math.random() * (max - min))
 }
 
-// 冒泡排序
+// 梳子排序
 // main
 function sort(list) {
-	for (let i = 0; i < list.length; i++) {
-		for (let j = i + 1; j < list.length; j++) {
-			if (list[j] < list[i]) {
-				const tmp = list[i]
-				list[i] = list[j]
-				list[j] = tmp
+	const gap = 1.3
+	let bool = true
+	let step = ~~(list.length / gap)
+
+	do {
+		for (let i = 0; step + i < list.length; i++) {
+			if (list[i] > list[step + i]) {
+				const temp = list[i]
+				list[i] = list[step + i]
+				list[step + i] = temp
 			}
 		}
-	}
-
+		step = ~~(step / gap)
+		if (step < 1) {
+			step = 1
+			bool = false
+		}
+	} while (bool)
+	
 	return list
 }
 
