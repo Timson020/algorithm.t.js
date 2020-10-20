@@ -106,7 +106,7 @@ export default class Binary {
 function newDate() {
 	const tree = new Binary()
 
-	const list = [5,56,57,89,123,1,30,6,0]
+	const list = [ 5, 56, 57, 89, 123, 1, 30, 6, 0 ]
 
 	list.forEach(it => tree.insert(it))
 
@@ -148,3 +148,4 @@ function doPostOrderTraversal() {
 }
 
 newDate()
+

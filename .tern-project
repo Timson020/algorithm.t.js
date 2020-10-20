@@ -1,0 +1,5 @@
+{
+	"ecmaVersion": 10,
+	"libs": [],
+	"plugins": { "node": true }
+}
