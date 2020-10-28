@@ -20,5 +20,7 @@
 |插入排序|[insert-sort.js](./algorithm/sort/insert-sort.js)||
 
 ### 其他算法思路
+|名称|地址|描述|
+|--|--|--|
 |双指针|[sum-three.js](./algorithm/sum-three.js)|使用了一个三个数字相加等于目标值的事例做演示|
 
