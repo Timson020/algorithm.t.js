@@ -11,7 +11,7 @@
 ||单向链表|[unidirectional-linked-list.js](./data-structure/unidirectional-linked-list.js)||
 ||双向链表|[unidirectional-linked-list.js](./data-structure/bilateral-linked-list.js)||
 |树||||
-|二叉树||[binary-tree.js](./data-structure/binary-tree.js)|排序二叉树|
+||排序二叉树|[binary-tree.js](./data-structure/binary-tree.js)||
 
 ## 算法
 ### 排序方法
@@ -25,4 +25,5 @@
 |名称|🔗|描述|
 |--|--|--|
 |双指针|[sum-three.js](./algorithm/sum-three.js)|使用了一个三个数字相加等于目标值的事例做演示|
+|dummy节点|[get-not-duplicate-link.js](./algorithm/get-not-duplicate-link.js)|使用删除全部有重复的节点案例做演示|
 

@@ -5,7 +5,11 @@ class Node {
 	}
 }
 
-export default class LinkedList {
+class LinkedList {
+	static newNode(el = {}) {
+		return new Node(el)
+	}
+
 	constructor(nodeStr) {
 		const _nodeStr = nodeStr || ''
 		const _strList = _nodeStr.split('||').filter(it => it)
@@ -84,14 +88,14 @@ export default class LinkedList {
 	 */
 	removeAt(index = 0) {
 		if (index < 0 || index > this.getLength()) return null
-		if (index === 0) return this.removeHead()
+		if (index === 0) return this.removeRoot()
 		const _preEl = this.getElementAt(index - 1)
 		const _currentEl = _preEl ? _preEl.next : null
-		if (!_preEl) return null
+		if (!_preEl || !_currentEl) return null
 		_preEl.next = _currentEl ? _currentEl.next : null
 		if ((index + 1) === this.getLength()) this.lastNode = _preEl.next || _preEl
 		--this.count
-		delete _currentEl.next
+		_currentEl.next = null
 		return _currentEl
 	}
 
@@ -159,31 +163,21 @@ export default class LinkedList {
 	}
 }
 
-function splitLog() {
-	console.info('-----split link-----')
-}
-
-const linkList = new LinkedList()
-linkList.push({ name: 'root', customDate: 1100 })
-linkList.push({ name: '1', customProps: 1021 })
-linkList.push({ name: '2', customProps: 9999 })
-linkList.push({ name: '3', customDate: 890 })
+module.exports = LinkedList
 
 
-linkList.insert(3, { name: 'test', customDate: 32190 })
-linkList.removeAt(2)
-splitLog()
-console.info(linkList.getElementAt(0))
-splitLog()
-console.info(linkList.getElementAt(1))
-splitLog()
-console.info(linkList.getElementAt(2))
-splitLog()
-console.info(linkList.getElementAt(3))
-splitLog()
-console.info(linkList.getElementAt(4))
-splitLog()
-console.info(linkList.toString())
-splitLog()
-console.info(new LinkedList(linkList.toString()))
+// 测试代码
+// const linkList = new LinkedList()
+// linkList.push({ name: 'root', customDate: 1100 })
+// linkList.push({ name: '1', customProps: 1021 })
+// linkList.push({ name: '2', customProps: 9999 })
+// linkList.push({ name: '3', customDate: 890 })
+// linkList.insert(1, { name: 'test', customDate: 32190 })
+// console.info(linkList.getElementAt(0))
+// console.info(linkList.getElementAt(1))
+// console.info(linkList.getElementAt(2))
+// console.info(linkList.getElementAt(3))
+// console.info(linkList.getElementAt(4))
+// console.info(linkList.toString())
+// console.info(new LinkedList(linkList.toString()))
 

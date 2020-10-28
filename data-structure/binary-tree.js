@@ -7,7 +7,7 @@ class Node {
 	}
 }
 
-export default class Binary {
+class Binary {
 	constructor() {
 		this.tree = null
 	}
@@ -102,50 +102,41 @@ export default class Binary {
 	}
 }
 
+module.exports = Binary
+
+// 测试代码
 // 校验生成二叉树
-function newDate() {
-	const tree = new Binary()
-
-	const list = [ 5, 56, 57, 89, 123, 1, 30, 6, 0 ]
-
-	list.forEach(it => tree.insert(it))
-
-	console.info(tree)
-	if (global) global._tree = tree
-
-	doInOrderTraversal()
-	console.info('中序遍历完成')
-
-	doPreOrderTraversal()
-	console.info('前序遍历完成')
-
-	
-	doPostOrderTraversal()
-	console.info('后序遍历完成')
-
-	console.info(`查找出最小值是: ${global._tree.min().key}`)
-
-	console.info(`查找出最大值是: ${global._tree.max().key}`)
-
-	console.info(`查找出9的值是: ${global._tree.find(new Node(9))}`)
-
-	console.info(`查找出6的值是: ${global._tree.find(new Node(6))}`)
-}
+// function newDate() {
+// 	const tree = new Binary()
+// 	const list = [ 5, 56, 57, 89, 123, 1, 30, 6, 0 ]
+// 	list.forEach(it => tree.insert(it))
+// 	console.info(tree)
+// 	if (global) global._tree = tree
+// 	doInOrderTraversal()
+// 	console.info('中序遍历完成')
+// 	doPreOrderTraversal()
+// 	console.info('前序遍历完成')
+// 	doPostOrderTraversal()
+// 	console.info('后序遍历完成')
+// 	console.info(`查找出最小值是: ${global._tree.min().key}`)
+// 	console.info(`查找出最大值是: ${global._tree.max().key}`)
+// 	console.info(`查找出9的值是: ${global._tree.find(new Node(9))}`)
+// 	console.info(`查找出6的值是: ${global._tree.find(new Node(6))}`)
+// }
 
 // 执行中序遍历
-function doInOrderTraversal() {
-	if (global._tree) global._tree.inOrderTraversal((value) => console.info(value))
-}
+// function doInOrderTraversal() {
+// 	if (global._tree) global._tree.inOrderTraversal((value) => console.info(value))
+// }
 
 // 执行前序遍历
-function doPreOrderTraversal() {
-	if (global._tree) global._tree.preOrderTraversal((value) => console.info(value))
-}
+// function doPreOrderTraversal() {
+// 	if (global._tree) global._tree.preOrderTraversal((value) => console.info(value))
+// }
 
 // 执行后续遍历
-function doPostOrderTraversal() {
-	if (global._tree) global._tree.postOrderTraversal((value) => console.info(value))	
-}
-
-newDate()
+// function doPostOrderTraversal() {
+// 	if (global._tree) global._tree.postOrderTraversal((value) => console.info(value))	
+// }
+// newDate()
 

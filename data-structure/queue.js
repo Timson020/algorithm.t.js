@@ -1,5 +1,5 @@
 // ES6
-export default class Queue {
+class Queue {
 	constructor() {
 		this.data = []
 	}
@@ -40,3 +40,6 @@ export default class Queue {
 		return this.data.join(p || ' ')
 	}
 }
+
+module.exports = Queue
+

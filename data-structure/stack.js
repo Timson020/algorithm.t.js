@@ -1,5 +1,5 @@
 // ES6
-export default class Stack {
+class Stack {
 	constructor() {
 		this.data = []
 	}
@@ -40,4 +40,6 @@ export default class Stack {
 		return this.data.join(p || ' ')
 	}
 }
+
+module.exports = Stack
 

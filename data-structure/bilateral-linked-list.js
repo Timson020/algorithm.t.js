@@ -161,18 +161,18 @@ class BilateralLink {
 	}
 }
 
-const link = new BilateralLink()
+module.exports = BilateralLink
 
-link.push({ name: 'root' })
-link.push({ name: '1' })
-link.push({ name: '2' })
-link.push({ name: '3' })
-link.push({ name: '4' })
-link.push({ name: '5' })
-
-console.info(link)
-console.info(link.toString())
-console.info(link.removeAt(5))
-console.info(link)
-console.info(link.toString())
-
+// 测试代码
+// const link = new BilateralLink()
+// link.push({ name: 'root' })
+// link.push({ name: '1' })
+// link.push({ name: '2' })
+// link.push({ name: '3' })
+// link.push({ name: '4' })
+// link.push({ name: '5' })
+// console.info(link)
+// console.info(link.toString())
+// console.info(link.removeAt(5))
+// console.info(link)
+// console.info(link.toString())
