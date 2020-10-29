@@ -26,4 +26,5 @@
 |--|--|--|
 |双指针|[sum-three.js](./algorithm/sum-three.js)|使用了一个三个数字相加等于目标值的事例做演示|
 |dummy节点|[get-not-duplicate-link.js](./algorithm/get-not-duplicate-link.js)|使用删除全部有重复的节点案例做演示|
+|多指针|[reverse-link.js](./algorithm/reverse-link.js)|全局反转链表|
 
